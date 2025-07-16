@@ -50,9 +50,7 @@ CREATE TABLE Leaves (
     end_date DATE NOT NULL,
     reason TEXT NOT NULL,
     status ENUM('Pending','Approved','Denied') NOT NULL DEFAULT 'Pending',
-    approved_by_employee_id INT NULL,
     FOREIGN KEY (employee_id) REFERENCES Employees(employee_id) ON DELETE CASCADE,
-    FOREIGN KEY (approved_by_employee_id) REFERENCES Employees(employee_id) ON DELETE SET NULL
 );
 
 -- Payroll_Records
